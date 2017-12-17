@@ -289,32 +289,6 @@ jobs:
   ###########################################
 
   ###########################################
-  # START Build AMI
-  ###########################################
-  - name: patch_baseami
-    type: runSh
-    steps:
-      - IN: cexec_repo
-      - IN: node_repo
-        switch: off
-      - IN: baseami_params
-      - IN: aws_v2_bits_access
-      - IN: baseami_prep
-        switch: off
-      - IN: bldami_repo
-        switch: off
-      - TASK:
-        - script: IN/bldami_repo/gitRepo/basePatch/basePatchPack.sh
-    on_success:
-      - script: echo "SUCCESS"
-    on_failure:
-      - script: cat IN/bldami_repo/gitRepo/basePatch/output.txt
-
-  ###########################################
-  # END Build AMI
-  ###########################################
-
-  ###########################################
   # START Drydockaarch64 image builds
   ###########################################
 
@@ -512,7 +486,7 @@ jobs:
       - IN: aws_v2_bits_access
       - IN: bldami_repo
         switch: off
-      - IN: patch_baseami
+      - IN: baseami_patch
         switch: off
       - IN: rel_prod
         switch: off
