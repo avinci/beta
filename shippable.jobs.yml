@@ -167,8 +167,7 @@ jobs:
     steps:
       - IN: config_repo
         switch: off
-      - IN: patch_baseami
-        switch: off
+      - IN: baseami_patch
       - IN: aws_rc_pem
       - IN: aws_rc_swarm
       - IN: api_img
