@@ -336,28 +336,6 @@ jobs:
   # START TAG & PUSH image/repos/amis
   ###########################################
 
-  - name: tag_push_img_genexec
-    type: runSh
-    steps:
-      - IN: config_repo
-        switch: off
-      - IN: genexec_img
-        switch: off
-      - IN: shipbits_ecr_v2_cli
-        scopes:
-          - ecr
-        switch: off
-      - IN: ship_dh_cli_v2
-        switch: off
-      - IN: rel_prod
-      - TASK:
-        - script: ./IN/config_repo/gitRepo/tagAndPushImage.sh genexec 374168611083.dkr.ecr.us-east-1.amazonaws.com
-        - script: ./IN/config_repo/gitRepo/tagAndPushImage.sh genexec drydock
-    on_success:
-      - script: echo 'on success !!!!!'
-    on_failure:
-      - script: echo 'Failed job .... :('
-
   - name: tag_reqProc
     type: runSh
     steps:
