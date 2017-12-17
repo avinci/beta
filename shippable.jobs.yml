@@ -336,21 +336,6 @@ jobs:
   # START TAG & PUSH image/repos/amis
   ###########################################
 
-  - name: tag_reqProc
-    type: runSh
-    steps:
-      - IN: config_repo
-        switch: off
-      - IN: ship_dh_cli_v2
-        switch: off
-      - IN: rel_prod
-      - TASK:
-          script:
-            - ./IN/config_repo/gitRepo/tagAndPushImage.sh reqproc drydock
-            - ./IN/config_repo/gitRepo/tagAndPushImage.sh m10reqproc drydock
-            - echo "This should run ./IN/config_repo/gitRepo/tagAndPushImage.sh w16reqproc drydock"
-            - ./IN/config_repo/gitRepo/tagAndPushImage.sh reqproc drydockaarch64
-
   - name: tag_reqExec
     type: runSh
     steps:
