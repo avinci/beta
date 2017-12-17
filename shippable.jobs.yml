@@ -445,31 +445,6 @@ jobs:
   ##########################
   # start build release amis
   ##########################
-  - name: build_finalami
-    type: runSh
-    steps:
-      - IN: dry_dh_x86_64_Ubuntu_tag_push
-        switch: off
-      - IN: ship_ecr_x86_64_Ubuntu_tag_push
-        switch: off
-      - IN: tag_push_img_genexec
-        switch: off
-      - IN: gh_ship_repos_tag_push
-        switch: off
-      - IN: baseami_params
-      - IN: aws_v2_bits_access
-      - IN: bldami_repo
-        switch: off
-      - IN: baseami_patch
-        switch: off
-      - IN: rel_prod
-        switch: off
-      - TASK:
-        - script: IN/bldami_repo/gitRepo/exec/execPack.sh
-    on_success:
-      - script: echo "SUCCESS"
-    on_failure:
-      - script: cat /build/IN/bldami_repo/gitRepo/exec/output.txt
 
   - name: build_v532
     type: runSh
