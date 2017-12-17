@@ -311,23 +311,6 @@ resources:
   ###############################
   # END drydockaarch64 resources
   ###############################
-  ###############################
-  # Begin SSH Key to GH
-  ###############################
-
-  # CREDS for GH access for Shippable
-  - name: avi_gh_ssh
-    type: integration
-    integration: avi_gh_ssh
-
-  # TODO: Remove this after avi_gh_ssh is added to dry-dock-aarch64 organisation
-  - name: aarch64_gh_ssh
-    type: integration
-    integration: aarch64_gh_ssh
-
-  ###############################
-  # End SSH Key to GH
-  ###############################
 
 #  - name: team_params
 #    type: params
