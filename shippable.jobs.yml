@@ -471,31 +471,6 @@ jobs:
     on_failure:
       - script: cat /build/IN/bldami_repo/gitRepo/exec/output.txt
 
-  - name: build_final_admiral_ami
-    type: runSh
-    dependencyMode: strict
-    steps:
-      - IN: rel_prod
-        switch: off
-      - IN: tag_push_img_genexec
-      - IN: gh_ship_repos_tag_push
-      - IN: ship_ecr_x86_64_Ubuntu_tag_push
-      - IN: config_repo
-        switch: off
-      - IN: bldami_repo
-        switch: off
-      - IN: baseadmiralami_prep
-        switch: off
-      - IN: aws_v2_prod_access
-      - IN: aws_v2_bits_access
-      - IN: admiralami_params
-      - TASK:
-        - script: IN/bldami_repo/gitRepo/admiralPatch/admiralPatchPack.sh build_final_admiral_ami admiralami_params rel_prod
-    on_success:
-      - script: echo 'SUCCESS'
-    on_failure:
-      - script: cat /build/IN/bldami_repo/gitRepo/admiralPatch/output.txt
-
   - name: build_v532
     type: runSh
     dependencyMode: strict
