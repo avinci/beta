@@ -1,23 +1,11 @@
 resources:
-  - name: cexec_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/cexec
-      branch: master
+
 
   - name: execTemplates_repo
     type: gitRepo
     integration: ric03uec-github
     pointer:
       sourceName: shippable/execTemplates
-      branch: master
-
-  - name: node_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/node
       branch: master
 
   - name: reqExec_repo
