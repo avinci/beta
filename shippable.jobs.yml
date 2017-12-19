@@ -38,29 +38,6 @@ jobs:
       - TASK:
         - script: ./IN/config_repo/gitRepo/patchImage.sh mktg 374168611083.dkr.ecr.us-east-1.amazonaws.com rel_prod
 
-  - name: build_reqProc_x86_64_Ubuntu_16_04
-    type: runSh
-    steps:
-      - IN: reqProc_repo
-      - IN: reqExec_x86_64_Ubuntu_14_04_pack
-        switch: off
-      - IN: reqExec_x86_64_Ubuntu_16_04_pack
-        switch: off
-      - IN: package_reqExec_x86_64_CentOS_7
-        switch: off
-      - IN: package_reqExec_x86_64_macOS_10_12
-        switch: off
-      - IN: reqExec_aarch64_Ubuntu_16_04_pack
-        switch: off
-      - IN: execTemplates_repo
-      - IN: shipbits_ecr_v2_cli
-        scopes:
-          - ecr
-      - IN: ship_dh_cli_v2
-      - IN: microbase_img
-      - TASK:
-        - script: ./IN/reqProc_repo/gitRepo/build.sh x86_64 Ubuntu_16.04 drydock reqproc
-
   - name: build_reqProc_x86_64_macOS_10_12
     type: runSh
     runtime:
@@ -87,33 +64,6 @@ jobs:
       - IN: microbase_img
       - TASK:
         - script: ./IN/reqProc_repo/gitRepo/build.sh x86_64 macOS_10.12 drydock m10reqproc
-
-  - name: build_reqProc_aarch64_Ubuntu_16_04
-    type: runSh
-    runtime:
-      architecture: aarch64
-      os: Ubuntu_16.04
-      container: false
-    steps:
-      - IN: reqProc_repo
-      - IN: reqExec_x86_64_Ubuntu_14_04_pack
-        switch: off
-      - IN: reqExec_x86_64_Ubuntu_16_04_pack
-        switch: off
-      - IN: package_reqExec_x86_64_CentOS_7
-        switch: off
-      - IN: package_reqExec_x86_64_macOS_10_12
-        switch: off
-      - IN: reqExec_aarch64_Ubuntu_16_04_pack
-        switch: off
-      - IN: execTemplates_repo
-      - IN: shipbits_ecr_v2_cli
-        scopes:
-          - ecr
-      - IN: ship_dh_cli_v2
-      - IN: aarch64_microbase_img
-      - TASK:
-        - script: ./IN/reqProc_repo/gitRepo/build.sh aarch64 Ubuntu_16.04 drydockaarch64 reqproc
 
   # TODO: move this job to x86_64 CentOS_7
   - name: package_reqExec_x86_64_CentOS_7
