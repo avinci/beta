@@ -50,7 +50,7 @@ jobs:
         switch: off
       - IN: package_reqExec_x86_64_macOS_10_12
         switch: off
-      - IN: package_reqExec_aarch64_Ubuntu_16_04
+      - IN: reqExec_x86_64_Ubuntu_16_04_pack
         switch: off
       - IN: execTemplates_repo
       - IN: shipbits_ecr_v2_cli
@@ -77,7 +77,7 @@ jobs:
         switch: off
       - IN: package_reqExec_x86_64_macOS_10_12
         switch: off
-      - IN: package_reqExec_aarch64_Ubuntu_16_04
+      - IN: reqExec_x86_64_Ubuntu_16_04_pack
         switch: off
       - IN: execTemplates_repo
       - IN: shipbits_ecr_v2_cli
@@ -104,7 +104,7 @@ jobs:
         switch: off
       - IN: package_reqExec_x86_64_macOS_10_12
         switch: off
-      - IN: package_reqExec_aarch64_Ubuntu_16_04
+      - IN: reqExec_x86_64_Ubuntu_16_04_pack
         switch: off
       - IN: execTemplates_repo
       - IN: shipbits_ecr_v2_cli
