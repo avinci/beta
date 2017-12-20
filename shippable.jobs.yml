@@ -109,7 +109,7 @@ jobs:
       - IN: www_img
       - IN: nexec_img
       - IN: mktg_img
-#      - IN: micro_img
+      - IN: micro_img
       - IN: admiral_img
       - TASK:
         - script: ./IN/config_repo/gitRepo/deployRc.sh
