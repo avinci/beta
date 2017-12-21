@@ -9,11 +9,6 @@ resources:
       sourceName: shippable/beta
       branch: master
 
-  - name: ship_ver
-    type: version
-    seed:
-      versionName: "5.12.0"
-
   ###############################
   # end Shippable Server resources
   ###############################
