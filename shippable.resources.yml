@@ -86,21 +86,6 @@ resources:
     integration: aws-prod-pem
 
   ###############################
-  # begin RC resources
-  ###############################
-
-  # Swarm node info for alpha
-  - name: aws_rc_swarm
-    type: params
-    version:
-      params:
-        secure: vmR5kHmceqFIKNoMgcx4cxCTQptaJ29V+YEQXqjVQ9gAMLzBxeSoO9+/ZPUgbO33sp291HG0k8Qrx/gbaKEGM6UufX9TTmlL8Yw/XahKjfx3ZWf2uKvNGN8aqBue2g8A/HSC0f9vt4Zf1oacRsrXof/9L5HWcKfoD5GJjezTHnpqHjWuYB0lz7ApzSKpGLi0n2yycjNTMPycwO5l0BCRGkNBj82ak3cUM98omN6+bB9cACTGvbcFgufaBFfa35SCtEDUZpn7OoZhk+T+1YmjP3EK+mgcEerA1zG7avSfFCQmBqI5M7xBoVG+CAQ4gF7RVXjxCpFseaBVS8jcvEC8CQ==
-
-  ###############################
-  # end RC resources
-  ###############################
-
-  ###############################
   # BEGIN BVT resources
   ###############################
   - name: bvt_v2_repo
@@ -127,21 +112,6 @@ resources:
 
   ###############################
   # END BVT resources
-  ###############################
-
-  ###############################
-  # BEGIN AMI Build resources
-  ###############################
-
-  - name: aws_v2_bits_access_cli
-    type: cliConfig
-    integration: aws_bits_access
-    pointer:
-      region: us-east-1
-
-
-  ###############################
-  # END AMI Build resources
   ###############################
 
   ###############################
@@ -183,7 +153,6 @@ resources:
     type: time
     seed:
       interval: "*/15 * * * *"
-
 
 #  - name: team_params
 #    type: params
