@@ -22,23 +22,6 @@ jobs:
   # end check_queue job
   ##########################
 
-
-  ###########################################
-  # release production from default manifest
-  ###########################################
-
-  - name: rel_prod
-    type: release
-    steps:
-      - IN: ship_ver
-        switch: off
-#      - IN: bvt-v2
-#        switch: off
-      - IN: rc_deploy  #temp instead of bvt-v2
-        switch: off
-      - TASK: managed
-        bump: patch
-
   ###########################################
   # BEGIN run infra provisioning
   ###########################################
