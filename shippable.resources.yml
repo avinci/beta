@@ -1,32 +1,4 @@
 resources:
-  - name: execTemplates_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/execTemplates
-      branch: master
-
-  - name: reqExec_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/reqExec
-      branch: master
-
-  - name: reqProc_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/reqProc
-      branch: master
-
-  - name: reqKick_repo
-    type: gitRepo
-    integration: ric03uec-github
-    pointer:
-      sourceName: shippable/reqKick
-      branch: master
-
   ###############################
   # begin Shippable Server resources
   ###############################
