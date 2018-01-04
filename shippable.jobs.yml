@@ -35,6 +35,7 @@ jobs:
         switch: off
       - TASK:
         - script: IN/infra_repo/gitRepo/provision.sh rc saas
+      - OUT: rc_saas_state
     on_success:
       - script: echo 'SUCCESS!'
     on_failure:
@@ -51,7 +52,6 @@ jobs:
         switch: off
       - TASK:
         - script: IN/infra_repo/gitRepo/provision.sh prod saas
-      - OUT: rc_saas_state
     on_success:
       - script: echo 'SUCCESS!'
     on_failure:
