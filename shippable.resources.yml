@@ -24,15 +24,15 @@ resources:
       sourceName: "Shippable/infra"
       branch: master
 
-  # PEM key for AWS RC account
-  - name: aws_rc_pem
-    type: integration
-    integration: aws-rc-pem
-
-  # CREDS for AWS RC account
-  - name: aws_v2_rc_access
-    type: integration
-    integration: aws_rc_access
+#  # PEM key for AWS RC account
+#  - name: aws_rc_pem
+#    type: integration
+#    integration: aws-rc-pem
+#
+#  # CREDS for AWS RC account
+#  - name: aws_v2_rc_access
+#    type: integration
+#    integration: aws_rc_access
 
   ###############################
   # end rc infra
@@ -41,16 +41,16 @@ resources:
   ###############################
   # begin prod infra resources
   ###############################
-
-  # CREDS for AWS PROD account
-  - name: aws_v2_prod_access
-    type: integration
-    integration: aws_prod_access
-
-  # PEM key for AWS PROD account
-  - name: aws_prod_pem
-    type: integration
-    integration: aws-prod-pem
+#
+#  # CREDS for AWS PROD account
+#  - name: aws_v2_prod_access
+#    type: integration
+#    integration: aws_prod_access
+#
+#  # PEM key for AWS PROD account
+#  - name: aws_prod_pem
+#    type: integration
+#    integration: aws-prod-pem
 
   ###############################
   # BEGIN BVT resources
