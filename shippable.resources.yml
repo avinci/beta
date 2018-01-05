@@ -17,12 +17,12 @@ resources:
   # begin rc infra
   ###############################
   # REPO of AWS Infra provisioning
-  - name: infra_repo
-    type: gitRepo
-    integration: "ric03uec-github"
-    pointer:
-      sourceName: "Shippable/infra"
-      branch: master
+#  - name: infra_repo
+#    type: gitRepo
+#    integration: "ric03uec-github"
+#    pointer:
+#      sourceName: "Shippable/infra"
+#      branch: master
 
 #  # PEM key for AWS RC account
 #  - name: aws_rc_pem
