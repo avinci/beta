@@ -1,0 +1,4 @@
+language: python
+build:
+  ci:
+    - ls -al
